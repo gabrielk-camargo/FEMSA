@@ -1,0 +1,37 @@
+header{
+    background-color: var(--cor-banner);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner img{
+    width: 200px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.menu_hamburger {
+    display: inline-block;
+    position: relative;
+}
+
+#menu-link {
+    display: none;
+    position: absolute;
+    top: 10;
+    left: -10px; /* Posicione o menu à esquerda da tela */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-open #menu-link {
+    display: block;
+}
