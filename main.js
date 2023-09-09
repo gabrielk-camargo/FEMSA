@@ -120,3 +120,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const calcularDiferencaButton = document.getElementById("calcular-diferenca");
+    const dataInicialInput = document.getElementById("data-inicial");
+    const dataFinalInput = document.getElementById("data-final");
+    const resultadoDiferenca = document.getElementById("resultado-diferenca");
+
+    calcularDiferencaButton.addEventListener("click", function () {
+        const dataInicial = new Date(dataInicialInput.value);
+        const dataFinal = new Date(dataFinalInput.value);
+
+        if (!isNaN(dataInicial.getTime()) && !isNaN(dataFinal.getTime())) {
+            if (dataFinal >= dataInicial) {
+                const umDiaEmMilissegundos = 24 * 60 * 60 * 1000; // Um dia em milissegundos
+                const diferencaEmMilissegundos = dataFinal - dataInicial;
+                const diferencaEmDias = Math.floor(diferencaEmMilissegundos / umDiaEmMilissegundos);
+
+                resultadoDiferenca.textContent = `Diferença em dias: ${diferencaEmDias} dias`;
+            } else {
+                resultadoDiferenca.textContent = "A data final não pode ser anterior à data inicial.";
+            }
+        } else {
+            resultadoDiferenca.textContent = "Por favor, insira datas válidas.";
+        }
+    });
+});
