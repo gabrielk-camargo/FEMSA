@@ -1,5 +1,5 @@
-@import url(../style/header.css);
-@import url(../style/main.css);
+@import url(header.css);
+@import url(main.css);
 
 :root{
     --cor-banner: #c4baba;
