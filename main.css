@@ -23,7 +23,7 @@ input {
     border: none;
 }
 
-.botão_calcular{
+.botão_calcular, #imprimir{
     padding: 10px;
     border-radius: 10px;
     border: none;
