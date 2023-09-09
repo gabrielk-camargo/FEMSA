@@ -98,3 +98,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuLink = document.getElementById("menu-link");
+
+    menuToggle.addEventListener("click", function () {
+        const menuHamburger = menuToggle.parentElement;
+        if (menuHamburger.classList.contains("menu-open")) {
+            menuHamburger.classList.remove("menu-open");
+        } else {
+            menuHamburger.classList.add("menu-open");
+        }
+    });
+
+    // Fechar o menu se o usuário clicar em qualquer lugar fora dele
+    document.addEventListener("click", function (event) {
+        if (!menuToggle.contains(event.target) && !menuLink.contains(event.target)) {
+            const menuHamburger = menuToggle.parentElement;
+            menuHamburger.classList.remove("menu-open");
+        }
+    });
+});
