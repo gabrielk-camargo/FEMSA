@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const resultadoRotuloValue = quantiaRotulo * 2500;
     const resultadoAlcaValue = quantiaAlca * 7143;
-    const resultadoEmbaladoraValue = quantiaPlasticoEmbaladora * 27.07;
-    const resultadoPaletizadoraValue = quantiaPlasticoPaletizadora * 16.91;
+    const resultadoEmbaladoraValue = (quantiaPlasticoEmbaladora * 27.07).toFixed(2);
+    const resultadoPaletizadoraValue = (quantiaPlasticoPaletizadora * 16.91).toFixed(2);
 
     resultadoRotulo.textContent = `Rótulo: ${resultadoRotuloValue}`;
     resultadoAlca.textContent = `Alça: ${resultadoAlcaValue}`;
@@ -72,10 +72,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 </head>
                 <body>
                     <pre>
-                        Rótulo: ${resultadoRotuloValue}
-                        Alça: ${resultadoAlcaValue}
-                        Plástico Embaladora: ${resultadoEmbaladoraValue}
-                        Plástico Paletizadora: ${resultadoPaletizadoraValue}
+                     
+                      <img  style="width: 200px;" src="femsa-logo.png" alt="logo femsa" />
+
+                        Quantia:
+
+                        Rótulo: ${quantiaRotulo} Und
+                        Alça: ${quantiaAlca} Und
+                        Bulbina Embaladora: ${quantiaPlasticoEmbaladora} Kg
+                        Bulbina Paletizadora: ${quantiaPlasticoPaletizadora} Kg
+                        
+                       Total:
+                       
+                        Rótulo: ${resultadoRotuloValue} Und
+                        Alça: ${resultadoAlcaValue} Und
+                        Plástico Embaladora: ${resultadoEmbaladoraValue} Kg
+                        Plástico Paletizadora: ${resultadoPaletizadoraValue} Kg
                     </pre>
                 </body>
                 </html>
